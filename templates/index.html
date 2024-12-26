@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Development System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Professional Development System</h1>
+        <p>Focus on skills to improve yourself as an IT Engineer.</p>
+    </header>
+    
+    <section class="skills">
+        <h2>Skills to Develop</h2>
+
+        <div class="category">
+            <h3>Workout Skills</h3>
+            <ul>
+                {% for skill in skills.workout %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="category">
+            <h3>IT Skills</h3>
+            <ul>
+                {% for skill in skills.it_skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="category">
+            <h3>Miscellaneous Skills</h3>
+            <ul>
+                {% for skill in skills.miscellaneous %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
