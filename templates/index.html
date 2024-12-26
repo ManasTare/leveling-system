@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Development System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>System - Professional Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Professional Development System</h1>
-        <p>Focus on skills to improve yourself as an IT Engineer.</p>
-    </header>
-    
-    <section class="skills">
-        <h2>Skills to Develop</h2>
 
-        <div class="category">
-            <h3>Workout Skills</h3>
-            <ul>
-                {% for skill in skills.workout %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+<body class="bg-[#221426] text-[#F2F2F2] font-sans">
 
-        <div class="category">
-            <h3>IT Skills</h3>
-            <ul>
-                {% for skill in skills.it_skills %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-
-        <div class="category">
-            <h3>Miscellaneous Skills</h3>
-            <ul>
-                {% for skill in skills.miscellaneous %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
+    <!-- Notification Box -->
+    <section class="flex justify-center items-center min-h-screen">
+        <div class="bg-[#445EF2] text-white rounded-lg p-6 max-w-md w-full space-y-4">
+            <div class="text-center">
+                <h2 class="text-xl font-semibold">Notification</h2>
+            </div>
+            <p class="text-lg text-center">You have acquired the qualification to be a <b>PLAYER</b>. Will you accept?</p>
+            <div class="flex justify-center">
+                <!-- Yes Button, when clicked will take user to their profile -->
+                <a href="/profile" class="bg-[#F2F2F2] text-[#221426] py-3 px-8 rounded-full text-xl font-semibold transition duration-300 ease-in-out hover:bg-[#A480F2] hover:text-[#F2F2F2]">
+                    Yes, I Accept
+                </a>
+            </div>
         </div>
     </section>
+
 </body>
+
 </html>
