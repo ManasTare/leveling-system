@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile - System</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .chakra-petch-semibold {
+            font-family: "Chakra Petch", serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
 </head>
 
-<body class="bg-[#221426] text-[#F2F2F2] font-sans">
+<body class="bg-[#221426] text-[#F2F2F2] chakra-petch-semibold p-4 lg:p-0">
 
-    <!-- Profile Content Section - Ensure no scrolling -->
+    <!-- Profile Content Section -->
     <section class="flex justify-center items-center min-h-screen w-full">
         <div class="bg-[#1D1340] text-[#F2F2F2] rounded-lg p-6 w-full max-w-md space-y-4">
             <!-- User Info Display -->
@@ -24,7 +34,7 @@
 
             <!-- Button to continue to training -->
             <div class="flex justify-center mt-4">
-                <a href="#" class="bg-[#445EF2] text-white py-3 px-8 rounded-full text-lg font-semibold transition duration-300 ease-in-out hover:bg-[#A480F2]">
+                <a href="/dashboard" class="bg-[#445EF2] text-white py-3 px-8 rounded-full text-lg font-semibold transition duration-300 ease-in-out hover:bg-[#A480F2]">
                     Start Your Journey
                 </a>
             </div>
